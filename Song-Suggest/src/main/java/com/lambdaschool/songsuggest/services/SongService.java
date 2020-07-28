@@ -12,7 +12,7 @@ public interface SongService {
 
     Song save(User user, Song song);
 
-    Song update(Song role, long id);
+    Song update(Song song, long id);
 
     void delete(long id);
 

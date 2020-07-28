@@ -27,7 +27,7 @@ public class Song extends Auditable {
             allowSetters = true)
     private User user;
 
-    public Song(String name, String artist, String spotifyid, String album, String previewurl, String albumcover, String releasedate, User user) {
+    public Song(String name, String artist, String spotifyid, String album, String previewurl, String albumcover, String releasedate) {
         this.name = name;
         this.artist = artist;
         this.spotifyid = spotifyid;
@@ -35,7 +35,6 @@ public class Song extends Auditable {
         this.previewurl = previewurl;
         this.albumcover = albumcover;
         this.releasedate = releasedate;
-        this.user = user;
     }
 
     public Song() {
