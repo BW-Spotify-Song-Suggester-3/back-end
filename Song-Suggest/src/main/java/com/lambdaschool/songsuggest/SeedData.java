@@ -42,6 +42,7 @@ public class SeedData
         r2 = roleService.save(r2);
         r3 = roleService.save(r3);
 
+//        Song s1 = new Song("Jammin", "Bob Marley", "982", "Exodus", "www.previewurl.com", "www.albumcoverurl.com", "June 3, 1977", u1);
 
         User u1 = new User("admin",
                 "password",
@@ -55,10 +56,11 @@ public class SeedData
                 .add(new Useremail(u1,
                         "admin@mymail.local"));
 
+
         userService.save(u1);
 
-        Song s1 = new Song("Jammin", "Bob Marley", "982", "Exodus", "www.previewurl.com", "www.albumcoverurl.com", "June 3, 1977", u1);
-        s1 = songService.save(u1, s1);
+//        Song s1 = new Song("Jammin", "Bob Marley", "982", "Exodus", "www.previewurl.com", "www.albumcoverurl.com", "June 3, 1977", u1);
+//        s1 = songService.save(u1, s1);
 
     }
 }

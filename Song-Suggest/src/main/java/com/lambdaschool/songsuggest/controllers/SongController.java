@@ -3,6 +3,7 @@ package com.lambdaschool.songsuggest.controllers;
 import com.lambdaschool.songsuggest.models.Song;
 import com.lambdaschool.songsuggest.models.User;
 import com.lambdaschool.songsuggest.services.SongService;
+import com.lambdaschool.songsuggest.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
@@ -21,6 +22,9 @@ import java.util.List;
 public class SongController {
     @Autowired
     SongService songService;
+
+    @Autowired
+    UserService userService;
 
     @GetMapping(value = "/user/{userid}", produces = {"application/json"})
     public ResponseEntity<?> listAllSongs(HttpServletRequest request, @PathVariable long userid) {
@@ -68,13 +72,13 @@ public class SongController {
             @RequestBody
                     Song updateSong,
             @PathVariable
-                    long userid, @PathVariable
                     long songid) {
-        User dataUser = new User();
-        dataUser.setUserid(userid);
+//        User dataUser = userService.findUserById(userid);
+
+
 
         updateSong.setSongid(songid);
-        songService.save(dataUser, updateSong);
+        songService.update(updateSong, songid);
 
         return new ResponseEntity<>(HttpStatus.OK);
     }
@@ -83,8 +87,8 @@ public class SongController {
     @DeleteMapping(value = "/delete/song/{songid}")
     public ResponseEntity<?> deleteBookById(
             @PathVariable
-                    long id) {
-        songService.delete(id);
+                    long songid) {
+        songService.delete(songid);
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
