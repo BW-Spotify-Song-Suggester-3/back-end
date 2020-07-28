@@ -40,72 +40,123 @@ Format: {
 
 ENDPOINTS
 
+
 (Get Token/Login)
+
 GET
+
 https://tjs-songsuggest.herokuapp.com/login
 
+
 (List all users)
+
 GET
+
 https://tjs-songsuggest.herokuapp.com/users/users
 
+
 (get user by id)
+
 GET
+
 https://tjs-songsuggest.herokuapp.com/users/user/{userId}
 
+
 (get user by name)
+
 GET
+
 https://tjs-songsuggest.herokuapp.com/users/user/name/{userName}
 
+
 (Add new user)
+
 POST
+
 https://tjs-songsuggest.herokuapp.com/users/user
 
+
 (Update full user)
+
 PUT
+
 https://tjs-songsuggest.herokuapp.com/users/user/{userid}
+
 
 (Update user)
+
 PUT
+
 https://tjs-songsuggest.herokuapp.com/users/user/{userid}
 
+
 (Delete user)
+
 DELETE
+
 https://tjs-songsuggest.herokuapp.com/users/user/{userid}
+
 
 
 
 (List all songs)
+
 GET
+
 https://tjs-songsuggest.herokuapp.com/songs/user/{userid}
 
+
 (Get song by id)
+
 GET
+
 https://tjs-songsuggest.herokuapp.com/songs/song/{songId}
 
+
 (Add new song)
+
 POST
+
 https://tjs-songsuggest.herokuapp.com/songs/create/user/{userid}/song
 
+
 (Update song)
+
 PUT
+
 https://tjs-songsuggest.herokuapp.com/songs/update/song/{songid}
 
+
 (Delete song)
+
 DELETE
+
 https://tjs-songsuggest.herokuapp.com/songs/delete/song/{songid}
 
 
 
+
+
 (Logout user)
+
 GET
+
 https://tjs-songsuggest.herokuapp.com/logout
+
 
 
 (TEST TOKEN)
 token name= admin token
+
 grant type= password credentials
+
 username= admin
+
 password= password
+
 clientid= lambda-client
+
 clientsecret= lambda-secret
+
+
 
