@@ -73,7 +73,7 @@ https://tjs-songsuggest.herokuapp.com/users/user/name/{userName}
 
 POST
 
-https://tjs-songsuggest.herokuapp.com/users/user
+https://tjs-songsuggest.herokuapp.com/createnewuser
 
 
 (Update full user)
