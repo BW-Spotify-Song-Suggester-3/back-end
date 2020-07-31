@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 
 import javax.persistence.EntityNotFoundException;
 import javax.transaction.Transactional;
+import java.util.ArrayList;
 import java.util.List;
 
 @Transactional
@@ -23,6 +24,16 @@ public class SongServiceImpl implements SongService {
 
     @Autowired
     UserRepository userrepos;
+
+    @Override
+    public List<Song> findAll()
+    {
+        List<Song> list = new ArrayList<>();
+        songrepos.findAll()
+                .iterator()
+                .forEachRemaining(list::add);
+        return list;
+    }
 
     @Override
     public List<Song> findAllByUserId(Long userid) {

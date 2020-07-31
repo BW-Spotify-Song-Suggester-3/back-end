@@ -85,7 +85,7 @@ public class SongController {
 
     @PreAuthorize("hasAuthority('ROLE_ADMIN')")
     @DeleteMapping(value = "/delete/song/{songid}")
-    public ResponseEntity<?> deleteBookById(
+    public ResponseEntity<?> deleteSongById(
             @PathVariable
                     long songid) {
         songService.delete(songid);

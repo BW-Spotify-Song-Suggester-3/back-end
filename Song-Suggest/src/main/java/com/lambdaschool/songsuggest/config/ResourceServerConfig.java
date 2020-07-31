@@ -35,7 +35,7 @@ public class ResourceServerConfig
                         "/v2/api-docs",
                         "/webjars/**",
                         "/createnewuser",
-                        "/song/{songId}")
+                        "/songs/song/{songId}")
                 .permitAll()
                 .antMatchers("/users/**",
                         "/useremails/**",

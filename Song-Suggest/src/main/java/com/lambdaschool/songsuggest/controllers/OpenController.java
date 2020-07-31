@@ -72,7 +72,13 @@ public class OpenController {
 
 
         RestTemplate restTemplate = new RestTemplate();
-        String requestURI = "http://" + httpServletRequest.getServerName() + ":" + httpServletRequest.getLocalPort() + "/login";
+        String port = "";
+        if (httpServletRequest.getServerName()
+                .equalsIgnoreCase("localhost"))
+        {
+            port = ":" + httpServletRequest.getLocalPort();
+        }
+        String requestURI = "http://" + httpServletRequest.getServerName() + port + "/login";
 
         List<MediaType> acceptableMediaTypes = new ArrayList<>();
         acceptableMediaTypes.add(MediaType.APPLICATION_JSON);
