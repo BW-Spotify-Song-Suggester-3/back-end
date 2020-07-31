@@ -6,6 +6,8 @@ import com.lambdaschool.songsuggest.models.User;
 import java.util.List;
 
 public interface SongService {
+    List<Song> findAll();
+
     List<Song> findAllByUserId(Long userid);
 
     Song findSongById(long id);

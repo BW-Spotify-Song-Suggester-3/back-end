@@ -64,7 +64,7 @@ public class UserController {
     }
 
 
-    @PostMapping(value = "/user",
+    @PostMapping(value = "/createnewuser",
             consumes = "application/json")
     public ResponseEntity<?> addNewUser(
             @Valid

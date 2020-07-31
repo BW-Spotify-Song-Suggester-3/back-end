@@ -1,16 +1,20 @@
 package com.lambdaschool.songsuggest;
 
-import com.lambdaschool.songsuggest.models.*;
+import com.lambdaschool.songsuggest.models.Role;
+import com.lambdaschool.songsuggest.models.User;
+import com.lambdaschool.songsuggest.models.UserRoles;
+import com.lambdaschool.songsuggest.models.Useremail;
 import com.lambdaschool.songsuggest.services.RoleService;
 import com.lambdaschool.songsuggest.services.SongService;
 import com.lambdaschool.songsuggest.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
-//import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
+import org.springframework.stereotype.Component;
+
 @Transactional
-//@Component
+@Component
 public class SeedData
         implements CommandLineRunner {
 
